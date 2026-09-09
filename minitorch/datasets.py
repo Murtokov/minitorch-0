@@ -21,6 +21,7 @@ class Graph:
 
 
 def simple(N):
+    """Датасет, разделимый x_1 = 0.5"""
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -30,6 +31,7 @@ def simple(N):
 
 
 def diag(N):
+    """Датасет, разделимый x_1 + x_2 = 0.5"""
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -39,6 +41,7 @@ def diag(N):
 
 
 def split(N):
+    """Датасет, содержащий нули внутри полосе 0.2 <= x_1 <= 0.8"""
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -48,6 +51,7 @@ def split(N):
 
 
 def xor(N):
+    """Единицы во втором и четвёртом квадранте"""
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -57,6 +61,7 @@ def xor(N):
 
 
 def circle(N):
+    """Датасет, разделимый кругом с центром в (0.5, 0.5) и радиусом \sqrt(0.1)"""
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -67,6 +72,7 @@ def circle(N):
 
 
 def spiral(N):
+    """Датасет в виде двух спиралей"""
 
     def x(t):
         return t * math.cos(t) / 20.0
